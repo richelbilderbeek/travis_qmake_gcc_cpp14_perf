@@ -21,6 +21,6 @@ script:
   # Run
   - sudo perf record -g ./travis_qmake_gcc_cpp14_perf
   # Produce the perf log
-  - perf report --stdio -g 'graph,0.5,caller' > perf.log
+  - sudo perf report --stdio -g 'graph,0.5,caller' > perf.log
   # Show the perf log
-  - cat parf.log
+  - sudo cat parf.log

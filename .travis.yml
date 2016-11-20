@@ -10,14 +10,17 @@ before_install:
 install: 
   # C++14
   - sudo apt-get install -qq g++-5
+  # perf
+  - sudo apt-get install linux-tools-generic
+
 
 script: 
   # Build
   - qmake
   - make release
   # Run
-  - ./travis_qmake_gcc_cpp14_gprof
-  # produce the gprof log
-  - gprof travis_qmake_gcc_cpp14_gprof > gprof.log
-  # Read the 100 top lines
-  - head gprof.log -n 1000
+  - sudo perf record -g ./travis_qmake_gcc_cpp14_perf
+  # Produce the perf log
+  - perf report --stdio -g 'graph,0.5,caller' > perf.log
+  # Show the perf log
+  - cat parf.log

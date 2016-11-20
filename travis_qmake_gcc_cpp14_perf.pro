@@ -15,7 +15,6 @@ CONFIG(release, debug|release) {
   DEFINES += NDEBUG
 }
 
-# gprof
-QMAKE_CXXFLAGS += -pg
-QMAKE_LFLAGS += -pg
-
+# perf
+QMAKE_CXXFLAGS += -fno-omit-frame-pointer
+QMAKE_LFLAGS += -fno-omit-frame-pointer

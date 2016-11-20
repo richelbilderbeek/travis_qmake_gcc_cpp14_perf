@@ -23,4 +23,4 @@ script:
   # Produce the perf log
   - sudo perf report --stdio -g 'graph,0.5,caller' > perf.log
   # Show the perf log
-  - sudo cat parf.log
+  - cat perf.log

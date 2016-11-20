@@ -11,7 +11,7 @@ install:
   # C++14
   - sudo apt-get install -qq g++-5
   # perf
-  - sudo apt-get install linux-tools
+  - sudo apt-get install linux-tools-3.13.0-92-generic
 
 
 script: 

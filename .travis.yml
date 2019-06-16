@@ -1,15 +1,10 @@
 language: cpp
+dist: xenial
 compiler: gcc
-sudo: require
-
-before_install:
-  # C++14
-  - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
-  - sudo apt-get update -qq
 
 install: 
-  # C++14
-  - sudo apt-get install -qq g++-5
+  # Qt5
+  - sudo apt-get install -qq qt5-qmake qt5-default
   # perf
   - sudo apt-get install linux-tools-3.13.0-92-generic
 
@@ -17,7 +12,7 @@ install:
 script: 
   # Build
   - qmake
-  - make release
+  - make release --silent
   # Run
   - sudo perf record -g ./travis_qmake_gcc_cpp14_perf
   # Produce the perf log

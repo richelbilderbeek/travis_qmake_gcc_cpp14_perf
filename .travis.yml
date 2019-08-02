@@ -6,7 +6,7 @@ install:
   # Qt5
   - sudo apt-get install -qq qt5-qmake qt5-default
   # perf
-  - sudo apt-get install linux-tools-3.13.0-92-generic linux-tools-4.4.0-101-generic linux-cloud-tools-4.4.0-101-generic
+  #- sudo apt-get install linux-tools-3.13.0-92-generic linux-tools-4.4.0-101-generic linux-cloud-tools-4.4.0-101-generic
 
 script: 
   # Build

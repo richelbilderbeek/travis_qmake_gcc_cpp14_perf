@@ -7,7 +7,7 @@ install:
   # Qt5
   - sudo apt-get install -qq qt5-qmake qt5-default
   # perf
-  - sudo apt-get install -qq linux-tools-4.15.0-1037-gcp 
+  - sudo apt-get install -qq linux-tools-4.15.0-1037-gcp linux-tools-4.15.0-1040-gcp linux-cloud-tools-4.15.0-1040-gcp
   # linux-cloud-tools-4.15.0-1037-gcp linux-tools-gcp linux-cloud-tools-gcp
 
 script: 
